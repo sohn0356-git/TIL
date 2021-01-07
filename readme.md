@@ -12,7 +12,7 @@
 
 # [Python](./PyStudy)
 
-* 20-12-29 ~ : multicampus에서 배운 python내용 기록
+* 20-12-29 ~ : multicampus에서 배운 python내용 및 독학한 내용 기록
 
 
 
