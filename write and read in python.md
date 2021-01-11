@@ -151,6 +151,8 @@ print(text)
 ```
 
 <u>God will mak</u>e a way															=>										e a way
+
+
 Where there seems to be no way								  	=>										Wh
 
 => "e a way\nWh"
