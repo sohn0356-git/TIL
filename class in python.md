@@ -1,16 +1,3 @@
----
-layout: post
-title:  "Class에 대한 밍기적 in Python"
-summary: Python의 Class 대해 알아보자
-author: GJ
-date: '2021-01-12 13:28:23 +0530'
-category: etc
-comment: true
-tags: [ming-gi-jeog]
-thumbnail: /assets/img/posts/default.jpg
----
-
-
 # 클래스
 
 * 클래스는 관련된 속성과 동작을 하나의 범주로 묶어 실세계의 사물을 흉내 낸다.
