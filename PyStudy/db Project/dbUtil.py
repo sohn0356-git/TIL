@@ -4,6 +4,9 @@ import sqlite3
 # fruit
 #id name qt price grade origin
 
+
+
+
 class FruitDB:
 
     con = None
@@ -24,7 +27,7 @@ class FruitDB:
         self.__data = {}
         while True:
             for d in FruitDB.dbList:
-                item = input('%s[입력을 원하지 않을 경우 Space bar를 눌러주세요] : '%d)
+                item = input('%s[입력을 원하지 않을 경우 Enter 혹은 Space bar를 눌러주세요] : '%d)
                 self.__data[d] = item.strip()
             print()
             for k, v in self.__data.items():
@@ -79,10 +82,13 @@ class FruitDB:
                                 """ % (FruitDB.tableName, self.__data['name'], int(self.__data['qt']), int(self.__data['price']), self.__data['grade'], self.__data['origin'], self.__data['id'])
                 FruitDB.cursor.execute(updateSQL)
                 print("데이터가 성공적으로 입력되었습니다!\n")
+                FruitDB.con.commit()
             else:
                 print("해당하는 데이터가 존재하지 않습니다.\n")
         else:
             print('id가 입력되지 않았습니다!\n')
+
+
 
     @classmethod
     def connectDB(cls):
