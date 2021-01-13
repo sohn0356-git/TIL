@@ -24,17 +24,16 @@
        　
       
     * 맴버 함수
-      * Constructor
+      * Constructor        
         
         * 사용자로부터 원하는 정보를 받아 저장하는 dict 맴버 변수 __data
-      * insert
+      * insert        
         
         * 사용자로부터 받은 정보를 table에 넣는 함수
-      * query
+      * query        
         
         * 사용자로부터 받은 질의를 만족하는 데이터를 table에서 찾아서 출력
-      * update
-        
+      * update        
         * 사용자로부터 받은 수정사항을 데이터에 적용시키는 함수
         
         　 
