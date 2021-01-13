@@ -33,4 +33,10 @@
         * `order.db`와 연결하는 함수
       * makeTable
         * `fruits`테이블이 생성되어있지 않을 경우 생성해주는 함수
+      * select
+        * 사용자로부터 입력 받은 정보에 맞는 데이터를 table에서 찾아서 출력
+      * delete
+        * 사용자로부터 입력 받은 `id`를 key로 갖는 데이터를 table에서 찾아서 삭제
+      * closeDB
+        * db와의 연결을 해제
 
