@@ -24,15 +24,15 @@
        　
       
     * 맴버 함수
-      * Constructor        
-        
+      * Constructor                
         * 사용자로부터 원하는 정보를 받아 저장하는 dict 맴버 변수 __data
-      * insert        
         
+      * insert                
         * 사용자로부터 받은 정보를 table에 넣는 함수
-      * query        
         
+      * query                
         * 사용자로부터 받은 질의를 만족하는 데이터를 table에서 찾아서 출력
+        
       * update        
         * 사용자로부터 받은 수정사항을 데이터에 적용시키는 함수
         
@@ -41,12 +41,16 @@
     * Class 함수
       * connectDB
         * `order.db`와 연결하는 함수
+        
       * makeTable
           * `fruits`테이블이 생성되어있지 않을 경우 생성해주는 함수
+          
       * select
         * 사용자로부터 입력 받은 정보에 맞는 데이터를 table에서 찾아서 출력
+        
       * delete
         * 사용자로부터 입력 받은 `id`를 key로 갖는 데이터를 table에서 찾아서 삭제
+        
       * closeDB
         * db와의 연결을 해제
 
