@@ -25,7 +25,8 @@ textName = wx.TextCtrl(panel1)
 textName.SetHint('Name : ?')
 textAge = wx.TextCtrl(panel1)
 textAge.SetHint('Age : ?')
-bt = wx.Button(panel1, label='ADD')
+btAdd = wx.Button(panel1, label='ADD')
+btDelete = wx.Button(panel1, label="DELETE")
 
 userList = wx.ListBox(panel2,choices=data)
 userList.SetBackgroundColour(colour='green')
@@ -34,9 +35,8 @@ userList.SetSize(wx.EXPAND,wx.EXPAND)
 # List Event ............................
 def itemSelect(event):
     global  userList
-    global data
     userIdx = userList.GetSelection()
-    wx.MessageBox(data[userIdx],'User Information',wx.OK)
+    wx.MessageBox(userList.GetString(userIdx),'User Information',wx.OK)
 
 userList.Bind(wx.EVT_LISTBOX,itemSelect)
 # Button Event ..........................
@@ -47,27 +47,55 @@ def onClick(event):
     global textAge
     global userList
     global data
+    global panel2
+
     id = textId.GetValue()
     pwd = textPwd.GetValue()
     name = textName.GetValue()
     age = textAge.GetValue()
     wx.MessageBox(id+"생성 완료", ' Alert', wx.OK)
 
-    userList.Append(id+' '+name + ' ' + age)
     print('Inserted')
     app1.userInsert(User(id=id,pwd=pwd,name=name,age=int(age)))
-    data = app1.init()
+
+    userList.Clear()
+    users = app1.init()
+    for user in users:
+        userList.Append("%s %s %d" % (user.id, user.name, user.age))
+
+
     textId.SetValue('')
     textPwd.SetValue('')
     textName.SetValue('')
+    textAge.SetValue('')
 
-bt.Bind(wx.EVT_BUTTON,onClick)
+def onClickDelete(event):
+    global textId
+    global userList
+
+    id = textId.GetValue()
+    wx.MessageBox(id + "제거 완료", ' Alert', wx.OK)
+
+    print('Deleted')
+    app1.userDelete(id)
+
+    userList.Clear()
+    users = app1.init()
+    for user in users:
+        userList.Append("%s %s %d" % (user.id, user.name, user.age))
+
+
+    textId.SetValue('')
+
+btAdd.Bind(wx.EVT_BUTTON, onClick)
+btDelete.Bind(wx.EVT_BUTTON, onClickDelete)
 box1 = wx.BoxSizer(wx.VERTICAL)
 box1.Add(textId)
 box1.Add(textPwd)
 box1.Add(textName)
 box1.Add(textAge)
-box1.Add(bt)
+box1.Add(btAdd)
+box1.Add(btDelete)
 panel1.SetSizer(box1)
 
 

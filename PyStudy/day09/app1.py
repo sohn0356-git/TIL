@@ -9,6 +9,10 @@ def userInsert(user):
     userdb = UserDB('shopdb.db')
     userdb.insert(user)
 
+def userDelete(id):
+    userdb = UserDB('shopdb.db')
+    userdb.delete(id)
+
 def init():
     userdb = UserDB('shopdb.db')
     return userdb.select()

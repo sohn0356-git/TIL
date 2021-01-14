@@ -34,3 +34,9 @@ class UserDB(SqliteDB):
         record = cc['cursor'].execute(Sql.sqlSelectUser % id).fetchone()
         self.close(cc)
         return User(record[0],record[1],record[2],record[3])
+
+    def delete(self, id):
+        cc = self.getConnect()
+        cc['cursor'].execute(Sql.sqlDeleteUser % id)
+        cc['con'].commit()
+        self.close(cc)

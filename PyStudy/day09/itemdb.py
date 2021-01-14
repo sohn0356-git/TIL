@@ -34,3 +34,9 @@ class ItemDB(SqliteDB):
         record = cc['cursor'].execute(Sql.sqlSelect % id).fetchone()
         self.close(cc)
         return Item(record[0],record[1],record[2],record[3])
+
+    def delete(self, id):
+        cc = self.getConnect()
+        cc['cursor'].execute(Sql.sqlDeleteItem % id)
+        cc['con'].commit()
+        self.close(cc)

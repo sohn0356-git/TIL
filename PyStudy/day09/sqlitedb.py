@@ -51,9 +51,5 @@ class SqliteDB:
         cc['con'].commit()
         self.close(cc)
 
-    def delete(self, id):
-        cc = self.getConnect()
-        cc['cursor'].execute(Sql.sqlDelete % id)
-        cc['con'].commit()
-        self.close(cc)
+
 
