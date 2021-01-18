@@ -9,6 +9,14 @@ DROP TABLE IF EXISTS member;
 DROP TABLE IF EXISTS order_detail;
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS review;
+DROP TABLE IF EXISTS board;
+
+CREATE TABLE IF NOT EXISTS board
+(
+	mem_id NVARCHAR(30),
+	board_detail NVARCHAR(200),
+	PRIMARY KEY(mem_id)
+);
 
 CREATE TABLE IF NOT EXISTS review
 (
@@ -73,6 +81,7 @@ CREATE TABLE IF NOT EXISTS order_detail
 );
 
 
+ALTER TABLE board ADD CONSTRAINT board_id_fk_member FOREIGN KEY (mem_id) REFERENCES member(mem_id);
 ALTER TABLE review ADD CONSTRAINT id_fk_product FOREIGN KEY (p_id) REFERENCES product(p_id);
 ALTER TABLE review ADD CONSTRAINT id_fk_member FOREIGN KEY (mem_id) REFERENCES member(mem_id);
 ALTER TABLE order_detail ADD CONSTRAINT item_fk_detail FOREIGN KEY (detail_p_id) REFERENCES product(p_id);
