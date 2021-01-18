@@ -1,5 +1,7 @@
 # 운영체제 1일차
 
+　
+
 * [KOCW 강의](http://www.kocw.net/home/m/search/kemView.do?kemId=1226304)를 참고하여 운영체제 공부를 시작
 * 운영체제의 역할과 구성을 학습 및 정리
 
