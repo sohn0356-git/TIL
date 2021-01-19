@@ -31,9 +31,9 @@
 
    데이터가 중복으로 들어갔다. 이를 해결하겠다고 다음과 같이 무작정 항목을 늘리면 어떻게 될까?
 
-   | r ID | First Name | Surname |  Tel. No. 1  |  Tel. No. 2  |   Tel.No.3   |
-   | :--: | :--------: | :-----: | :----------: | :----------: | :----------: |
-   | 456  |    Jane    | Wright  | 555-403-1659 | 555-776-4100 | 555-403-1659 |
+   | Customer ID | First Name | Surname |  Tel. No. 1  |  Tel. No. 2  |   Tel.No.3   |
+   | :---------: | :--------: | :-----: | :----------: | :----------: | :----------: |
+   |     456     |    Jane    | Wright  | 555-403-1659 | 555-776-4100 | 555-403-1659 |
 
    　
 
@@ -41,11 +41,11 @@
 
    <center>Customer Name</center>
 
-   | er ID | First Name | Surname |
-   | :---: | :--------: | :-----: |
-   |  123  |   Robert   | Ingram  |
-   |  456  |    Jane    | Wright  |
-   |  789  |   Maria    |  Ferna  |
+   | Customer ID | First Name | Surname |
+   | :---------: | :--------: | :-----: |
+   |     123     |   Robert   | Ingram  |
+   |     456     |    Jane    | Wright  |
+   |     789     |   Maria    |  Ferna  |
 
    <center>Customer Telephone Number</center>
 
@@ -133,7 +133,7 @@
    |     우승자     | 우승자 생년 월일  |
    | :------------: | :---------------: |
    | Chip Masterson |   14 March 1977   |
-| Al Fredrickson |   21 July 1975    |
+   | Al Fredrickson |   21 July 1975    |
    | Bob Albertson  | 28 September 1968 |
 
    　
