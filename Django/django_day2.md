@@ -15,9 +15,8 @@
 ### 실습
 
 > 목차
-
-* [Bookmark App](#Bookmark App)
-* [Blog App](#Blog App)
+> * [Bookmark_App](#Bookmark_App)
+> * [Blog_App](#Blog_App)
 
 　
 
