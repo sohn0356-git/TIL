@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from blog.views import *
 
+app_name = 'blog'
+
 urlpatterns = [
     url(r'^$', PostLV.as_view(), name='index'),
     url(r'^post/$',PostLV.as_view(),name='post_lsit'),
