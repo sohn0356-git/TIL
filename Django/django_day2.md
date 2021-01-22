@@ -123,7 +123,7 @@ class BookmarkDV(DetailView):
 
 **bookmark_list.html**
 
-```python
+```html
 <!DOCTYPE html>
 <html>
     <head>
@@ -144,7 +144,7 @@ class BookmarkDV(DetailView):
 
 **bookmark_detail.html**
 
-```python
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
