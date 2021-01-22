@@ -14,10 +14,10 @@
 
 ### 실습
 
-* 목차
+> 목차
 
-> * [Bookmark App](#Bookmark App)
-> * [Blog App](#Blog App)
+* [Bookmark App](#Bookmark App)
+* [Blog App](#Blog App)
 
 　
 
@@ -162,7 +162,7 @@ class BookmarkDV(DetailView):
 </html>
 ```
 
-
+　
 
 #### Blog App
 
