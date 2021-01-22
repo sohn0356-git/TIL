@@ -20,7 +20,7 @@
 
 　
 
-#### Template App
+#### Template_App
 
 　
 
@@ -32,7 +32,7 @@
 
 　
 
-#### Bookmark App
+#### Bookmark_App
 
 　
 
@@ -163,7 +163,7 @@ class BookmarkDV(DetailView):
 
 　
 
-#### Blog App
+#### Blog_App
 
 　
 
