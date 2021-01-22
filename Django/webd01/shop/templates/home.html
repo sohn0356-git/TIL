@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            background:red;
+        }
+        img{
+            width : 100px;
+        }
+    </style>
+    <script>
+        alert('start')
+    </script>
+</head>
+<body>
+    <h1>Shop Test</h1>
+    <img src = "{% static 'img/logo.jpg' %}">
+    <h2><a href="page2">Page2</a></h2>
+    <h2><a href="page3">Page3</a></h2>
+    <h2><a href="page4">Page4</a></h2>
+    <h2><a href="page5">Page5</a></h2>
+    <h2><a href="register">register</a></h2>
+    <span>Span1</span>
+    <span>Span2</span>
+</body>
+</html>
