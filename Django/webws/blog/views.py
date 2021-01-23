@@ -15,12 +15,21 @@ def multi(request):
 
 def resume(request):
     if request.method == 'POST':
-        title = request.POST.get('title'), #.POST['title'],
-        content = request.POST.get('content'),
-        regdate = datetime.now()     
-        return HttpResponseRedirect('resume_page.html',{'t':'a','e':'s','d':'c'}) # 추가후 목록 보기로 돌아감
+        res_data = {}
+        r1 = request.POST.get('r1') #.POST['title'],
+        if r1=='cr1':
+            res_data['r1'] = "경력"
+        else:
+            res_data['r1'] = "신입"
+        c1 = request.POST.get('c1')
+        if c1=='ch1':
+            res_data['c1'] = "산책"
+        elif c1=='ch2':
+            res_data['c1'] = "운동"
+        else:
+            res_data['c1'] = "여행"
+        resume = request.POST.get('tt')
+        res_data['resume'] = resume
+        return render(request, 'resume_page.html', res_data)
     else:
         return render(request, 'resume.html')
-
-def result(request):
-    return render(request, 'result.jsp')

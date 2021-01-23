@@ -1,4 +1,4 @@
-"""webws URL Configuration
+"""pr_210123 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -13,13 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.contrib import admin
 from django.urls import path
-from django.views.decorators.csrf import csrf_exempt
-from blog import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('resume', views.resume, name='resume'),
-    path('table', views.table, name='table'),
-    path('multi', views.multi, name='multi'),
+    path('admin/', admin.site.urls),
 ]

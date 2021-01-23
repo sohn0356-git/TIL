@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Register</h1>
-    <form action="result" method="post">
+    <form method="post">
         {% csrf_token %}
         <fieldset>
             <legend>Resume</legend>
@@ -17,11 +17,11 @@
             <label for="job2">신입</label>
             <input type="radio" name="r1" value="cr2" id="job2">
             <p>취미</p>
-            <label for="h1">공부</label>
+            <label for="h1">산책</label>
             <input type="checkbox" name="c1" value="ch1" id="h1">
             <label for="h2">운동</label>
             <input type="checkbox" name="c1" value="ch2" id="h2">
-            <label for="h3">독서</label>
+            <label for="h3">여행</label>
             <input type="checkbox" name="c1" value="ch3" id="h3">
             <p>자기소개</p>
             <textarea rows="10" cols="50" name="tt"></textarea>
