@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-family: 'Potta One', cursive;
+        }
+        h2{
+            text-align: center;
+            font-size: 2em;
+            color:rebeccapurple;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            font-family: 'Potta One', cursive;
+        }
+        h4{
+            font-family: 'Hachi Maru Pop', cursive;
+        }
+        body{
+            background:pink;
+            background-image: url("{% static 'img/search.jpg' %}");
+        }
+    </style>
+</head>
+<body>
+    <h1>css01</h1>
+    <h2>css Font Test</h2>
+    <h3>css Font Test</h3>
+    <h4>css Font Test</h4>
+</body>
+</html>

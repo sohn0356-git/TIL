@@ -1,4 +1,4 @@
-"""pr_210123 URL Configuration
+"""css011 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -13,20 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.conf.urls import url
+from django.contrib import admin
 from django.urls import path, include
 
-from blog.views import *
-
-app_name = 'blog'
 
 urlpatterns = [
-    url(r'^$', PostLV.as_view(), name='index'),
-    url(r'^post/(?P<slug>\w+)/$', PostDV.as_view(), name='post_detail'),
-    url(r'^archive/$', PostAV.as_view(), name='post_archive'),
-    url(r'^archive/(?P<year>\d{4})/$', PostYAV.as_view(), name='post_year_archive'),
-    url(r'^archive/(?P<year>\d{4})/(?P<month>[a-z]{3})/$', PostMAV.as_view(), name='post_month_archive'),
-    url(r'^archive/(?P<year>\d{4})/(?P<month>[a-z]{3})/(?P<day>\d{1,2})/$', PostDAV.as_view(), name='post_day_archive'),
-    url(r'^today/$', PostTAV.as_view(), name='post_today_archive'),
+    url(r'^admin/', admin.site.urls),
+    url(r'^shop1/', include('shop1.urls')),
+    url(r'^shop2/', include('shop2.urls')),
 ]

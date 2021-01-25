@@ -1,4 +1,4 @@
-"""pr_210123 URL Configuration
+"""css01 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path, include
+from mycss.views import *
+
+app_name = "mycss"
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^bookmark/', include('bookmark.urls')),
-    url(r'^blog/', include('blog.urls')),
+    url(r'^$', home , name='home'),
+    url(r'^test/$', test , name='test'),
+    url(r'^test2/$', test2 , name='test2'),
+    url(r'^test3/$', test3 , name='test2'),
 ]
