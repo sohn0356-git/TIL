@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+    <header>
+        <style>
+            header > h1 > a{
+                color:white;
+                background-color: black;
+            }
+        </style>
+        <h1><a href="{% url 'shop2:shop2' %}">Naningu.com</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'shop2:userlist' %}">HTML5</a></li>
+            <li><a href="{% url 'shop2:useradd' %}">CSS3.0</a></li>
+            <li><a href="{% url 'shop2:itemlist' %}">jQuery</a></li>
+            <li><a href="{% url 'shop2:itemadd' %}">AJAX</a></li>
+        </ul>
+    </nav>
+    {% if section == 'userlist' %}
+        {% include  "shop2/userlist.html" %}
+    {% elif section == 'useradd' %}
+        {% include  "shop2/useradd.html" %}
+    {% elif section == 'userdetail' %}
+        {% include  "shop2/userdetail.html" %}
+    {% elif section == 'itemlist' %}
+        {% include  "shop2/itemlist.html" %}
+    {% elif section == 'itemadd' %}
+        {% include  "shop2/itemadd.html" %}
+    {% else %}
+        {% include  "shop2/mainsection.html" %}
+    {% endif %}
+
+    <footer></footer>
+{% endblock %}
+
+
+
+

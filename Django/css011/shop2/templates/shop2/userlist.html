@@ -1,0 +1,13 @@
+{% load static %}
+
+<section>
+    <h1>User List</h1>
+    <table>
+        <thead>User</thead>
+            <tbody>
+                {% for user in reusers %}
+                    <tr><td><a href="{% url 'shop2:userdetail' user.id %}">{{ user.id }}</a></td><td>{{ user.name }}</td></tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</section>

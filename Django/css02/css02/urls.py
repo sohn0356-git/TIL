@@ -1,4 +1,4 @@
-"""css011 URL Configuration
+"""css02 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -13,20 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
-from django.views.generic import TemplateView
-from shop2.views import *
-
-app_name = 'shop2'
+from django.urls import path, include
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='shop2/shop2.html'),name='shop2'),
-    url(r'^user/$',userlist,name='userlist'),
-    url(r'^user/(?P<id>\w+)/$',userdetail,name='userdetail'),
-    url(r'^useradd/$',useradd,name='useradd'),
-    url(r'^item/$',itemlist,name='itemlist'),
-    url(r'^item/add/$',itemadd,name='itemadd'),
-    url(r'^useraddimpl/$',useraddimpl,name='useraddimpl'),
+    path('admin/', admin.site.urls),
+    path('',include('company.urls')),
 ]

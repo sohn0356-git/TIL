@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% block title %} {% endblock %}
+</head>
+<body>
+<div>
+    <li><a href="{% url 'blog:post_archive' %}">Archive</a></li>
+    <li><a href="{% url 'blog:search' %}">Search</a></li>
+</div>
+{% block content %} {% endblock %}
+{% block footer %} {% endblock %}
+</body>
+</html>
