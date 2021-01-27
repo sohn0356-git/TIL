@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input[name="id"]').focus();
+            $('#login_form > button').click(function(){
+                var id = $('input[name="id"]').val();
+                var pwd = $('input[name="pwd"]').val();
+                if(id == '' || id ==null){
+                    alert('id를 입력하세요');
+                    $('input[name="id"]').focus();
+                    return;
+                }
+                if(pwd == '' || pwd ==null){
+                    alert('pwd를 입력하세요');
+                    $('input[name="pwd"]').focus();
+                    return;
+                }
+               $('#login_form').attr({'action':'{% url "jq:login" %}','method':'post'});
+               $('#login_form').submit();                 
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="login_form" action="#">
+        {% csrf_token %}
+        ID<input type="text" name="id"><br/>
+        PWD<input type="password" name="pwd"><br/>
+        <button>Login</button>
+    </form>
+</body>
+</html>

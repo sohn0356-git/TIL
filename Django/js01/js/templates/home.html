@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style></style>
+        <script>
+            //alert('Alert');
+            window.onload = function(){
+                document.getElementById("js").innerHTML = '<a href="">Click</a>';
+                document.querySelector('#hs').innerHTML = "clicked";
+                console.log("Start web Page ......");
+            }
+            function clickh3(){
+                alert('clicked h3....');
+            }
+        </script>
+    </head>
+    <body>
+        <h1 onclick="clickh3();">My Web Page</h1>
+        <h1 id="js">JavaScript test</h1>
+        <h2>JavaScript test</h2>
+        <h2 id="hs">JavaScript test</h2>
+        <h2>JavaScript test</h2>
+        <h2>JavaScript test</h2>
+        <h2>JavaScript test</h2>
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+        <script src="{% static 'js/myScript.js' %}"></script>
+    </body>
+</html>

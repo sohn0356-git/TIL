@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gonaver(){
+            var r = confirm("Go naver..?");
+            if (r == true) {
+                location.href='https://www.naver.com';
+            } else {
+                return;
+            }            
+        }
+      
+        function gogoogle(){
+            var r = confirm("Go google..?");
+            if (r == true) {
+                location.href='https://www.google.com';
+            } else {
+                return;
+            }            
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onclick="gonaver();">naver</a>
+    <button onclick="gogoogle();">google</button>
+    <a href="https://www.daum.net">daum</a>
+</body>
+</html>

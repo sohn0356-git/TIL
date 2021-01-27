@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function a(d1){
+            alert('a ...'+d1);
+        }
+        var b = function(d2){
+            alert('b ...'+d2);
+        };
+        function c(d1){
+            var result = d1*1000;
+            return result;
+        }
+        // a(100);
+        // b('abc');
+        // var t = c(50);
+        // alert(t);
+        var f1 = function(){
+            return 10;
+        };
+
+        function f2(f){
+            return f();
+        }
+
+        var res = f2(f1);
+        
+        var f3 = function(){
+            return function(){
+                return 50;
+            };
+        };
+
+        // alert(f3()());
+        var str1 = "alert('abc')";
+        // eval(str1);
+
+        var str2 = '{"id":"id01","age":30}'
+        // var json = eval(str2);
+        var str3 = '{"id":"id01","age":30,"score":[90,80,90,100]}'
+        var o = JSON.parse(str3);
+        console.log(o.score);
+        
+        var a = 10;
+        if(a > 100){
+            alert('big number');
+        }
+        else{
+            alert('small number');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

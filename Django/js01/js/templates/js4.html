@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 300px;
+            height: 500px;
+            border:2px solid red;
+        }
+    </style>
+    <script>
+        function display(data){
+            var result = '<table><thead>table</thead><tbody>';
+            console.log(data);
+            for(d in data){
+                result +='<tr><td>';
+                result += data[d].name + '</td><td>' + data[d].age;
+                result +='</td></tr>';
+            }
+            result += '</tbody></table>'
+            document.querySelector('div').innerHTML = result;
+        }
+        
+        function getData(){
+            var users = [
+            {'id':'id01', 'name':'james','age':10},
+            {'id':'id02', 'name':'james','age':20},
+            {'id':'id03', 'name':'james','age':30},
+            {'id':'id04', 'name':'james','age':40},
+            {'id':'id05', 'name':'james','age':50}
+            ];
+            display(users);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getData();">Get Data</button>
+    <div>
+        
+    </div>
+</body>
+</html>

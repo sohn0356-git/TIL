@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            alert('ok');
+            $('h1').html('<a href="#">abc</a>');
+            $('#hh2').html('<a href="#">dd</a>');
+            $('.c1').html('<a href="#">fg</a>');
+            $('h3').css('color','red');
+            $('h4').css({'color':'blue','background':'pink'});
+        });
+    </script>
+</head>
+<body>
+    <h1>jquery test</h1>
+    <h1>jquery test</h1>
+    <h1 id="hh2">jquery test</h1>
+    <h2 class="c1">jquery test</h1>
+    <h3>header3</h3>
+    <h4>header4</h4>
+</body>
+</html>
