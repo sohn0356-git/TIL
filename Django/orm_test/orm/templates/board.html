@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for board in allboard %}
+        <h2>{{ board }}</h2>
+        <span>{{ board.content_type }}</span>
+        <span>{{ board.content }}</span>
+        <span>{{ board.write_date }}</span>
+    {% endfor %}
+</body>
+</html>
