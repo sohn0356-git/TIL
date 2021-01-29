@@ -1,0 +1,16 @@
+{% load static %}
+
+<section>
+    <h1>User Update</h1>
+    <form action="{% url 'shop:itemupdateimpl' %}" method="POST" enctype=multipart/form-data>
+        {% csrf_token %}
+        ID<input type="text" name="id" value="{{ item.id }}" readonly="true"><br>
+        NAME<input type="text" name="name" value="{{ item.name }}"><br>
+        PRICE<input type="text" name="price" value="{{ item.price }}"><br>
+        IMG:{{ item.imgname }}
+        <input type="hidden" name="id" value="{{ item.id }}">
+        <input type="hidden" name="imgname" value="{{ item.imgname }}">
+        NEWNAME<input type="file" name="img"><br>
+        submit<input type="submit" value="submit"><br>
+    </form>
+</section>

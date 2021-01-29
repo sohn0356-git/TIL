@@ -1,3 +1,12 @@
 {% load static %}
 
-<section></section>
+<section>
+    <h1>Item Add</h1>
+    <form action="{% url 'shop:itemaddimpl' %}" method="POST" enctype=multipart/form-data>
+        {% csrf_token %}
+        NAME<input type="text" name="name"><br>
+        PRICE<input type="number" name="price"><br>
+        IMGNAME<input type="file" name="img"><br>
+        submit<input type="submit" value="upload"><br>
+    </form>
+</section>

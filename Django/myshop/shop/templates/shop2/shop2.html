@@ -2,35 +2,63 @@
 
 {% load static %}
 {% block content %}
+    
+    <style>
+        header > h1 > a{
+            color:white;
+            background-color: black;
+        }
+        .invisible{
+            visibility: invisible;
+        }
+    </style>
     <header>
-        <style>
-            header > h1 > a{
-                color:white;
-                background-color: black;
-            }
-        </style>
-        <h1><a href="{% url 'shop:shop' %}">Naningu.com</a></h1>
+        <h1><a href="{% url 'shop:home' %}">Naningu.com</a></h1>
     </header>
-    <nav>
+    <nav id ="login_nav">
         <ul>
-            <li><a href="{% url 'shop:userlist' %}">HTML5</a></li>
-            <li><a href="{% url 'shop:useradd' %}">CSS3.0</a></li>
-            <li><a href="{% url 'shop:itemlist' %}">jQuery</a></li>
-            <li><a href="{% url 'shop:itemadd' %}">AJAX</a></li>
+            <li class=invisible><a href="" ></a></li>
+            {% if request.session.suser %}
+            
+                <li><a href="{% url 'shop:logout' %}">logout</a></li>
+            {% else %}
+                <li><a href="{% url 'shop:login' %}">login</a></li>
+                <li><a href="{% url 'shop:register' %}">register</a></li>
+            {% endif %}
+            <li><a href="{% url 'shop:aboutus' %}">about</a></li>
         </ul>
     </nav>
-    {% if section == 'userlist' %}
+    <nav id="main_nav">
+        <ul>
+            <li><a href="{% url 'shop:userlist' %}">User List</a></li>
+            <li><a href="{% url 'shop:useradd' %}">User Add</a></li>
+            <li><a href="{% url 'shop:itemlist' %}">Item List</a></li>
+            <li><a href="{% url 'shop:itemadd' %}">Item Add</a></li>
+        </ul>
+    </nav>
+    {{ error }}
+    {% if section == 'shop2/userlist.html' %}
         {% include  "shop2/userlist.html" %}
-    {% elif section == 'useradd' %}
+    {% elif section == 'shop2/useradd.html' %}
         {% include  "shop2/useradd.html" %}
-    {% elif section == 'userdetail' %}
+    {% elif section == 'shop2/login.html' %}
+        {% include  "shop2/login.html" %}
+    {% elif section == 'shop2/loginok.html' %}
+        {% include  "shop2/loginok.html" %}
+    {% elif section == 'shop2/userdetail.html' %}
         {% include  "shop2/userdetail.html" %}
-    {% elif section == 'itemlist' %}
+    {% elif section == 'shop2/userupdate.html' %}
+        {% include  "shop2/userupdate.html" %}
+    {% elif section == 'shop2/itemlist.html' %}
         {% include  "shop2/itemlist.html" %}
+    {% elif section == 'shop2/itemadd.html' %}
+        {% include  "shop2/itemadd.html" %}
+    {% elif section == 'shop2/itemdetail.html' %}
+        {% include  "shop2/itemdetail.html" %}
+    {% elif section == 'shop2/itemupdate.html' %}
+        {% include  "shop2/itemupdate.html" %}
     {% elif section == 'errorpage' %}
         {% include  "shop2/errorpage.html" %}
-    {% elif section == 'itemadd' %}
-        {% include  "shop2/itemadd.html" %}
     {% else %}
         {% include  "shop2/mainsection.html" %}
     {% endif %}

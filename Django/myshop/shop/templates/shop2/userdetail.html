@@ -4,4 +4,7 @@
     <p>{{ user.id}} </p>
     <p>{{ user.pwd}} </p>
     <p>{{ user.name}} </p>
+    <a href="{% url 'shop:userdelete' user.id %}">DELETE</a>
+    <a href="{% url 'shop:userupdate' user.id %}">UPDATE</a>
+    <a href="{% url 'shop:home' %}">home</a>
 </section>

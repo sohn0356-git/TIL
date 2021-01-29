@@ -4,37 +4,39 @@
 
 from frame.db import *
 from frame.sql import Sql
-from frame.value import User
+from frame.value import Item
 
-class UserDb(Db):
+class ItemDb(Db):
     def selectone(self, id):
+        id = int(id)
         conn = self.getConnection()
         cursor = conn.cursor()
-        sql = Sql.userlistone%(id)
+        sql = Sql.itemlistone%(id)
         cursor.execute(sql)
-        u = cursor.fetchone()
-        user = User(u[0],u[1],u[2])
+        i = cursor.fetchone()
+        item = Item(i[0],i[1],i[2],i[3],i[4])
         self.close(conn,cursor)
-        return user
+        return item
 
     def select(self):
         conn = self.getConnection()
         cursor = conn.cursor()
-        sql = Sql.userlist
+        sql = Sql.itemlist
         cursor.execute(sql)
         result = cursor.fetchall()
         all = []
-        for u in result:
-            user = User(u[0],u[1],u[2])
-            all.append(user)
+        for i in result:
+            item = Item(i[0],i[1],i[2],i[3],i[4])
+            all.append(item)
         self.close(conn,cursor)
         return all
     
-    def insert(self, id,pwd,name):
+    def insert(self, name, price, imgname):
         try:
+            price = int(price)
             conn = self.getConnection()
             cursor = conn.cursor()
-            sql = Sql.userinsert % (id, pwd, name)
+            sql = Sql.iteminsert % (name, price, imgname)
             cursor.execute(sql)
             conn.commit()
         except:
@@ -45,9 +47,10 @@ class UserDb(Db):
 
     def delete(self, id):
         try:
+            id = int(id)
             conn = self.getConnection()
             cursor = conn.cursor()
-            sql = Sql.userdelete % (id)
+            sql = Sql.itemdelete % (id)
             cursor.execute(sql)
             conn.commit()
         except:
@@ -56,11 +59,13 @@ class UserDb(Db):
         finally:
             self.close(conn,cursor)
 
-    def update(self, id,pwd,name):
+    def update(self,id, name, price, imgname):
         try:
+            id = int(id)
+            price = int(price)
             conn = self.getConnection()
             cursor = conn.cursor()
-            sql = Sql.userupdate % (pwd, name, id)
+            sql = Sql.itemupdate % (name, price, imgname, id)
             cursor.execute(sql)
             conn.commit()
         except:
@@ -69,19 +74,16 @@ class UserDb(Db):
         finally:
             self.close(conn,cursor)
 
-# userlist test function ...........
-def userlist_test():
-    users = UserDb().select()
-    for u in users:
+# itemlist test function ...........
+def itemlist_test():
+    items = ItemDb().select()
+    for u in items:
         print(u)
 
-def userlistone_test():
-    user = UserDb().selectone('id01')
-    print(user)
+def itemlistone_test():
+    item = ItemDb().selectone('id01')
+    print(item)
 
-def userinsert_test():
-    UserDb().insert('id00','pwd00','name00')
-    userlist_test()
 
 if __name__ == '__main__':
-    userlist_test()
+    itemlist_test()

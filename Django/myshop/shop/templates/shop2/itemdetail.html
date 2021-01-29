@@ -1,0 +1,12 @@
+{% load static %}
+
+<section>
+    <p>{{ item.id }} </p>
+    <p>{{ item.name }} </p>
+    <p>{{ item.price }} </p>
+    <p>{{ item.regdate }} </p>
+    <img src="../../static/img/{{item.imgname}}" width:40px;>
+    <a href="{% url 'shop:itemdelete' item.id %}">DELETE</a>
+    <a href="{% url 'shop:itemupdate' item.id %}">UPDATE</a>
+    <a href="{% url 'shop:home' %}">home</a>
+</section>
