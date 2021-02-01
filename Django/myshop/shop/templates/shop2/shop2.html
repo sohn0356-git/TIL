@@ -8,9 +8,6 @@
             color:white;
             background-color: black;
         }
-        .invisible{
-            visibility: invisible;
-        }
     </style>
     <header>
         <h1><a href="{% url 'shop:home' %}">Naningu.com</a></h1>
@@ -19,11 +16,12 @@
         <ul>
             <li class=invisible><a href="" ></a></li>
             {% if request.session.suser %}
-            
                 <li><a href="{% url 'shop:logout' %}">logout</a></li>
+                <li><a href="{% url 'shop:maps' %}">map</a></li>
             {% else %}
                 <li><a href="{% url 'shop:login' %}">login</a></li>
                 <li><a href="{% url 'shop:register' %}">register</a></li>
+                
             {% endif %}
             <li><a href="{% url 'shop:aboutus' %}">about</a></li>
         </ul>
@@ -41,6 +39,8 @@
         {% include  "shop2/userlist.html" %}
     {% elif section == 'shop2/useradd.html' %}
         {% include  "shop2/useradd.html" %}
+    {% elif section == 'shop2/map.html' %}
+        {% include  "shop2/map.html" %}
     {% elif section == 'shop2/login.html' %}
         {% include  "shop2/login.html" %}
     {% elif section == 'shop2/loginok.html' %}

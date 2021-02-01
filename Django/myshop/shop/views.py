@@ -1,3 +1,5 @@
+import logging
+
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from frame.error import Errorcode
@@ -11,6 +13,8 @@ userdb = UserDb()
 reitemlist = []
 itemdb = ItemDb()
 
+logger = logging.getLogger('users')
+logger_item = logging.getLogger('items')
 # Create your views here.
 
 class ItemView():
@@ -134,6 +138,7 @@ def itemlist(request):
 
 def itemdetail(request, id):
     reitem = itemdb.selectone(id)
+    logger_item.debug(reitem.name+' '+str(reitem.price))
     context = {
         'section' : 'shop2/itemdetail.html',
         'item' : reitem
@@ -192,6 +197,7 @@ def itemadd(request):
 
 class Mainview():
     def login(request):
+        
         context = {
             'section' : 'shop2/login.html'
         }
@@ -213,6 +219,7 @@ class Mainview():
                     'section' : 'shop2/loginok.html',
                     'loginuser' : id
                 }
+                logger.debug('user id:'+id)
                 request.session['suser'] = id
                 
             else:
@@ -222,3 +229,7 @@ class Mainview():
                         'error' : 'Errorcode.code["e0003"]'}
             return render(request,'shop2/shop2.html',context)
         return render(request,'shop2/shop2.html',context)
+
+def maps(request):
+    context = {'section':'shop2/map.html'}
+    return render(request, 'shop2/shop2.html', context)

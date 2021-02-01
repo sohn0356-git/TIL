@@ -42,4 +42,5 @@ urlpatterns = [
     url(r'^item/(?P<id>\w+)/delete/$',itemdelete,name='itemdelete'),
     url(r'^item/(?P<id>\w+)/update/$',itemupdate,name='itemupdate'),
     url(r'^itemupdateimpl/$',ItemView.update,name='itemupdateimpl'),
+    url(r'^map/$',maps, name='maps'),
 ]
