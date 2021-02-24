@@ -27,5 +27,50 @@
     <ClCompile Include="exam04.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="whileTest.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="while_exam.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="while_exam2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="goto.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="forTest01.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam_for01.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam_for02.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam_for_star.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스1.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam_arr02.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="exam_2DArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="functionTest2.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="functionExam.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

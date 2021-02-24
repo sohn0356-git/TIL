@@ -139,10 +139,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="exam_2DArray.c" />
+    <ClCompile Include="exam_arr02.c" />
+    <ClCompile Include="exam_for01.c" />
     <ClCompile Include="exam01.c" />
     <ClCompile Include="exam02.c" />
     <ClCompile Include="exam04.c" />
+    <ClCompile Include="exam_for02.c" />
+    <ClCompile Include="exam_for_star.c" />
+    <ClCompile Include="forTest01.c" />
+    <ClCompile Include="functionExam.c" />
+    <ClCompile Include="functionTest2.cpp" />
     <ClCompile Include="IfTest01.c" />
+    <ClCompile Include="whileTest.c" />
+    <ClCompile Include="while_exam.cpp" />
+    <ClCompile Include="while_exam2.c" />
+    <ClCompile Include="goto.c" />
+    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="소스1.cpp" />
+    <ClCompile Include="소스2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
