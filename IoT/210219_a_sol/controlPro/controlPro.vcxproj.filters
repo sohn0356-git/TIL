@@ -108,5 +108,47 @@
     <ClCompile Include="array_func_exam.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="string_test01.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스4.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="string_test02.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer2DArray_exam1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스6.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스7.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스8.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스9.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스10.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스11.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스12.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스13.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="소스14.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

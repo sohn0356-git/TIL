@@ -154,15 +154,23 @@
     <ClCompile Include="functionTest2.cpp" />
     <ClCompile Include="IfTest01.c" />
     <ClCompile Include="miniPro.c" />
+    <ClCompile Include="pointer2DArray_exam1.c" />
     <ClCompile Include="pointer_function_exam.c" />
     <ClCompile Include="pointer_function_exam2.c" />
     <ClCompile Include="pointer_function_exam3.c" />
+    <ClCompile Include="string_test01.c" />
+    <ClCompile Include="string_test02.c" />
     <ClCompile Include="whileTest.c" />
     <ClCompile Include="while_exam.cpp" />
     <ClCompile Include="while_exam2.c" />
     <ClCompile Include="goto.c" />
     <ClCompile Include="소스.cpp" />
     <ClCompile Include="소스1.cpp" />
+    <ClCompile Include="소스10.cpp" />
+    <ClCompile Include="소스11.cpp" />
+    <ClCompile Include="소스12.cpp" />
+    <ClCompile Include="소스13.cpp" />
+    <ClCompile Include="소스14.cpp" />
     <ClCompile Include="소스2.cpp" />
     <ClCompile Include="exam_function.c" />
     <ClCompile Include="menufunction.c" />
@@ -170,6 +178,12 @@
     <ClCompile Include="exam_pointer2.c" />
     <ClCompile Include="pointer_function_exam4.c" />
     <ClCompile Include="array_func_exam.c" />
+    <ClCompile Include="소스4.cpp" />
+    <ClCompile Include="소스5.cpp" />
+    <ClCompile Include="소스6.cpp" />
+    <ClCompile Include="소스7.cpp" />
+    <ClCompile Include="소스8.cpp" />
+    <ClCompile Include="소스9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
