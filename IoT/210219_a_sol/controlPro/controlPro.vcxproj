@@ -171,6 +171,9 @@
     <ClCompile Include="소스12.cpp" />
     <ClCompile Include="소스13.cpp" />
     <ClCompile Include="소스14.cpp" />
+    <ClCompile Include="parking.c" />
+    <ClCompile Include="소스15.cpp" />
+    <ClCompile Include="소스16.cpp" />
     <ClCompile Include="소스2.cpp" />
     <ClCompile Include="exam_function.c" />
     <ClCompile Include="menufunction.c" />
