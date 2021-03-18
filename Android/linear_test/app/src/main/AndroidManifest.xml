@@ -9,17 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tablelayout_test">
+        <activity android:name=".scroll_exam">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FindViewExam02">
+        <activity android:name=".scroll_test01">
 
         </activity>
-        <activity android:name=".FindViewTestActivity2"></activity>
+        <activity android:name=".FrameLayout_exam"></activity>
+        <activity android:name=".FrameLayout_test" />
+        <activity android:name=".tablelayout_test" />
+        <activity android:name=".FindViewExam02" />
+        <activity android:name=".FindViewTestActivity2" />
         <activity android:name=".FindViewExam" />
         <activity android:name=".FindViewTestActivity" />
         <activity android:name=".MainActivity" />
